@@ -32,6 +32,14 @@ function buttonPress(){
             console.log(number2);
         }
     } else if (operators.contains(this)){
+        if (this.innerText == 'C') {
+            number1 = '';
+            number2 = '';
+            operator = '';
+            let display = document.querySelector('.display');
+            display.innerText = '';
+            return;
+        }
         if (!currentDisplay) { return; }
         if (operator == '') {
             operator = this.innerText;
